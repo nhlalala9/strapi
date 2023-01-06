@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boxings",
+  "info": {
+    "singularName": "boxing",
+    "pluralName": "boxings",
+    "displayName": "Boxing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "win": {
+      "type": "integer"
+    },
+    "Draw": {
+      "type": "integer"
+    },
+    "Lose": {
+      "type": "integer"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event",
+      "mappedBy": "boxing"
+    }
+  }
+}
